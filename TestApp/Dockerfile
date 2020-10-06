@@ -6,7 +6,7 @@ COPY "*.csproj" ./
 RUN dotnet restore 
 COPY . ./
 
-RUN dotnet publish -c Release -o /out
+RUN dotnet publish -c Release -o out
 
 FROM mcr.microsoft.com/dotnet/core/runtime:3.1-buster-slim AS base 
 WORKDIR /app
